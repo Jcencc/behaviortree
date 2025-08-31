@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.15)
 
 # 定义动态库项目名
 project(action LANGUAGES CXX)
@@ -11,13 +11,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(ACTION_SOURCES
         src/ScreenCheck.cpp
         src/MoveMouse.cpp
-        bt_export.hpp
 )
 
 set(ACTION_HEADERS
         include/ScreenCheck.h
         include/MoveMouse.h
-        bt_export.hpp
 )
 
 # 创建动态库

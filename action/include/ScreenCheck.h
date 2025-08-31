@@ -5,7 +5,7 @@
 #ifndef BEHAVIORTREE_SCREENCHECK_H
 #define BEHAVIORTREE_SCREENCHECK_H
 #include "behaviortree_cpp/bt_factory.h"
-#include "bt_export.hpp"
+
 #include <opencv2/opencv.hpp>
 #include <windows.h>
 #include <iostream>

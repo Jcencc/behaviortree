@@ -1,6 +1,7 @@
 #include "behaviortree_cpp/bt_factory.h"
 #include "ScreenCheck.h"
 #include "MoveMouse.h"
+#include "CreateStage.h"
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -96,7 +97,7 @@ public:
 int main()
 {
     try {
-        loadXmlFromFile("C:\\Users\\17203\\Desktop\\test.xml");
+        loadXmlFromFile("C:\\github\\behaviortree\\sample.xml");
         // 现在xml_text已经包含了XML文件的内容，可以像以前一样使用
         // 例如:
         // createTreeFromText(xml_text);
@@ -111,12 +112,10 @@ int main()
     factory.registerNodeType<ScreenCheck>("ScreenCheck");
     factory.registerNodeType<MoveMouse>("MoveMouse");
     factory.registerNodeType<ThinkWhatToSay>("ThinkWhatToSay");
+    factory.registerNodeType<CreateStage>("CreateStage");
 
     auto tree = factory.createTreeFromText(xml_text);
-    while (1) {
-        tree.tickWhileRunning();
-    }
-
+    tree.tickWhileRunning();
 
     return 0;
 }
